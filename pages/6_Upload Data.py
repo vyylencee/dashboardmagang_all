@@ -21,7 +21,7 @@ st.divider()
 
 credential = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=["https://www.googleapis.com/auth/spreadsheets"])
 
-SPREADSHEET_ID = '1WwBp8XhrDM7WA-emRpvhDfbbRYVX_nWQtPmrwTmxEhA'
+SPREADSHEET_ID = '1NZHkw-o3S708dd9Ng_Gwd_lj-VB4bPDVhjqrwySV8lg'
 
 service = build('sheets', 'v4', credentials=credential)
 credential.refresh(Request())
