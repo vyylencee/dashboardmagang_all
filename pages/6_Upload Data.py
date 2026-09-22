@@ -2,8 +2,7 @@ import streamlit as st
 import datetime as dt
 import pandas as pd
 from zoneinfo import ZoneInfo
-from load import save_data_to_google_sheet, log_data
-import os
+from load import save_data_to_google_sheet
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
 from google.auth.transport.requests import Request
