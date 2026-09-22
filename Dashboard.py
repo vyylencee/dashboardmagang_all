@@ -104,12 +104,12 @@ try :
             st.line_chart(x="DATE", x_label="Tanggal", 
                         y="PROD OIL (SOT)", y_label="Produksi Minyak (Bbl)",                    
                         data=tabelOilGas,
-                        use_container_width=True)
+                        width="stretch")
         else :
             st.line_chart(x="DATE", x_label="Bulan", 
                         y="PROD OIL (SOT)", y_label="Produksi Minyak (Bbl)",
                         data=tabelOilGas,
-                        use_container_width=True)
+                        width="stretch")
 
 
     # GRAFIK & CARDS GAS PRODUCTION #
@@ -165,7 +165,7 @@ try :
             st.line_chart(x="DATE", x_label="Tanggal",
                         y="PROD GAS (MSCFD)", y_label="Produksi Gas (MMSCFD)",
                         data=chart,
-                        use_container_width=True)
+                        width="stretch")
         else :
             chart = tabelOilGas[["DATE", "PROD GAS (MSCFD)"]].copy()
             chart["PROD GAS (MSCFD)"] = chart["PROD GAS (MSCFD)"] / 1000
@@ -173,7 +173,7 @@ try :
             st.line_chart(x="DATE", x_label="Bulan",
                         y="PROD GAS (MSCFD)", y_label="Produksi Gas (MMSCFD)",
                         data=chart,
-                        use_container_width=True)
+                        width="stretch")
 
     st.divider()
     st.subheader("💧 Water Injection")
@@ -185,7 +185,7 @@ try :
         st.line_chart(x="DATE", x_label="Tanggal",
                     y=["PROD WATER"] + ["INJECTION WATER"],y_label="Injection Water vs Production Water",
                     data=tabelOilGas,
-                    use_container_width=True)
+                    width="stretch")
 
     with graph2 :
         st.write("Injection Well")
@@ -193,7 +193,7 @@ try :
         st.line_chart(x="DATE", x_label="Tanggal",
                     y=["Flowrate (BWPD)"] + ["Tekanan (PSI)"], y_label="Flowrate (BWPD)",
                     data=wipDaily,
-                    use_container_width=True)
+                    width="stretch")
 
     st.divider()
 
@@ -216,7 +216,7 @@ try :
                     y="TOTAL SALES", y_label="Total Sales (MMSCF)",
                     data=nilai,
                     color="#65cf75",
-                    use_container_width=True)
+                    width="stretch")
 
     col1, col2 = st.columns([14,1])
     with col2:

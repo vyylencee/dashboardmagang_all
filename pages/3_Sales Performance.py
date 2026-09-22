@@ -49,38 +49,38 @@ try :
                             y=["SALES City Gas Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color="#FBFF90",
-                            use_container_width=True)
+                            width="stretch")
             elif locbny == "PLN Bunyu":
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["SALES PLN Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color="#4273AF",
-                            use_container_width=True)
+                            width="stretch")
             else :
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["SALES PLN Bunyu"] + ["SALES City Gas Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color=["#4273AF", "#FBFF90"],
-                            use_container_width=True)
+                            width="stretch")
         else :
             if locbny == "Jargas Bunyu":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["SALES City Gas Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color="#FBFF90",
-                            use_container_width=True)
+                            width="stretch")
             elif locbny == "PLN Bunyu":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["SALES PLN Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color="#4273AF",
-                            use_container_width=True)
+                            width="stretch")
             else :
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["SALES PLN Bunyu"] + ["SALES City Gas Bunyu"], y_label="Total Sales (MMSCFD)",
                             data=data,
                             color=["#4273AF", "#FBFF90"],
-                            use_container_width=True)
+                            width="stretch")
     with col2 :
         loctrk = st.selectbox("Pilih Lokasi", ["Semua", "G-8", "Binalatung", "Kampung 1", "Jargas Tarakan"], key="locTRK")
 
@@ -91,62 +91,62 @@ try :
                             y=["G-8"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#FFD758",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Binalatung":
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["City Gas Tarakan"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#FCE59A",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Kampung 1":
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["Kampung 1"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#195B6F",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Jargas Tarakan":
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["Binalatung"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#90E5FF",
-                            use_container_width=True)
+                            width="stretch")
             else :
                 st.area_chart(x="DATE", x_label="Tanggal",
                             y=["Kampung 1"] + ["Binalatung"] + ["G-8"] + ["City Gas Tarakan"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color=["#195B6F","#90E5FF", "#FFD758", "#FCE59A"],
-                            use_container_width=True)
+                            width="stretch")
         else :
             if loctrk == "G-8":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["G-8"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#FFD758",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Binalatung":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["City Gas Tarakan"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#FCE59A",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Kampung 1":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["Kampung 1"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#195B6F",
-                            use_container_width=True)
+                            width="stretch")
             elif loctrk == "Jargas Tarakan":
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["Binalatung"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color="#90E5FF",
-                            use_container_width=True)
+                            width="stretch")
             else :
                 st.area_chart(x="DATE", x_label="Bulan",
                             y=["Kampung 1"] + ["Binalatung"] + ["G-8"] + ["City Gas Tarakan"], y_label="Total Sales (MMSCFD)",
                             data=tabelOilGas,
                             color=["#195B6F","#90E5FF", "#FFD758", "#FCE59A"],
-                            use_container_width=True)
+                            width="stretch")
 
     st.divider()
     locMedco = st.selectbox("Pilih Lokasi", ["Semua", "City Gas", "PLN"], key="locMedco")
@@ -156,16 +156,16 @@ try :
         st.area_chart(x="DATE", x_label="Tanggal",
                     y="Medco to City Gas", y_label ="Total Sales (MMSCFD)",
                     data=tabelOilGas,
-                    use_container_width=True)
+                    width="stretch")
     elif locMedco == "PLN" :
         st.area_chart(x="DATE", x_label="Tanggal",
                         y="Medco to PLN", y_label ="Total Sales (MMSCFD)",
                         data=tabelOilGas,
-                        use_container_width=True)
+                        width="stretch")
     else :
         st.area_chart(x="DATE", x_label="Tanggal",
                     y=["Medco to City Gas"] + ["Medco to PLN"], y_label ="Total Sales (MMSCFD)",
                     data=tabelOilGas,
-                    use_container_width=True)
+                    width="stretch")
 except KeyError as e :
     st.error("Data tidak tersedia pada Database.")

@@ -74,14 +74,14 @@ try :
         st.line_chart(x="DATE", x_label="Tanggal", 
                     y=["PROD OIL (SOT)"] + ["TARGET PRODUKSI OIL (RKAP)"] + ["TARGET PRODUKSI OIL (WP&B)"], y_label="Produksi Minyak (Bbl)",                    
                     data=tabelOilGas,
-                    use_container_width=True)
+                    width="stretch")
 
     with col4 :
         st.subheader("Target Produksi vs Pencapaian Produksi Gas")
         st.line_chart(x="DATE", x_label="Tanggal",
                     y=["PROD GAS (MSCFD)"] + ["TARGET RKAP GAS"] + ["TARGET WP&B GAS"], y_label="Produksi Gas (MSCFD)",
                     data=tabelOilGas,
-                    use_container_width=True)
+                    width="stretch")
 
     st.divider()
 
