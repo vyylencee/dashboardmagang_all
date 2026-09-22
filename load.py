@@ -69,7 +69,7 @@ def save_data_to_google_sheet(data1, data2, data3, sheet1, sheet2, sheet3) :
             body1 = {
                 'values': batch_values1
             }
-            sheet.values().update(
+            sheet.values().append(
                 spreadsheetId=SPREADSHEET_ID,
                 range=f"{sheet1}!A1",
                 valueInputOption="RAW",
@@ -81,7 +81,7 @@ def save_data_to_google_sheet(data1, data2, data3, sheet1, sheet2, sheet3) :
             body2 = {
                 'values': batch_values2
             }
-            sheet.values().update(
+            sheet.values().append(
                 spreadsheetId=SPREADSHEET_ID,
                 range=f"{sheet2}!A1",
                 valueInputOption="RAW",
@@ -93,7 +93,7 @@ def save_data_to_google_sheet(data1, data2, data3, sheet1, sheet2, sheet3) :
             body3 = {
                 'values': batch_values3
             }
-            sheet.values().update(
+            sheet.values().append(
                 spreadsheetId=SPREADSHEET_ID,
                 range=f"{sheet3}!A1",
                 valueInputOption="RAW",

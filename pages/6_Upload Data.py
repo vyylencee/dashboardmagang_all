@@ -45,12 +45,12 @@ if file is not None :
     wellData = pd.read_excel(file, sheet_name="WELL")
     bar_progress.progress(60)
 
-    text_progress.text("Menyimpan data ke Google Sheet... 80%")
+    text_progress.text("Menyimpan data ke Google Sheet... ")
     bar_progress.progress(80)
 
     try :
         save_data_to_google_sheet(OilGasData, wellData, wipData, "tabelOilGas", "tabelWell", "tabelWip")
-        text_progress.text("Data berhasil diupload ke Google Sheet... 100%")
+        text_progress.text("Data berhasil diupload ke Google Sheet... ")
         bar_progress.progress(100)
         st.success("✅ Data berhasil diupload ke Google Sheet.")
 
