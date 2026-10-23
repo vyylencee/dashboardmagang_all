@@ -10,9 +10,7 @@ from google.auth.transport.requests import Request
 waktuUpload = dt.datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
 PATH_LOG = "data/log upload.csv"
 
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
-credential = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=SCOPES)
+credential = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=['https://www.googleapis.com/auth/spreadsheets'])
 
 SPREADSHEET_ID = '1NZHkw-o3S708dd9Ng_Gwd_lj-VB4bPDVhjqrwySV8lg'
 RANGE_NAME = 'Sheet1'
@@ -56,7 +54,7 @@ def save_data_to_google_sheet(data1, data2, data3, sheet1, sheet2, sheet3) :
         values2 = [df2.columns.tolist()] + df2.values.tolist()
         values3 = [df3.columns.tolist()]  + df3.values.tolist()
 
-        batch_upload = 1000
+        batch_upload = 2000
 
         sheet.values().clear(spreadsheetId=SPREADSHEET_ID, range=f"{sheet1}!A1").execute()
         sheet.values().clear(spreadsheetId=SPREADSHEET_ID, range=f"{sheet2}!A1").execute()

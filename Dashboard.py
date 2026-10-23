@@ -222,4 +222,4 @@ try :
         if st.button("More Details") :
             st.switch_page("pages/3_Sales Performance.py")
 except KeyError as e :
-    st.error("Data tidak tersedia pada Database.")
+    st.error(e)
