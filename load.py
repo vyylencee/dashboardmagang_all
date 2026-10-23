@@ -1,6 +1,5 @@
 import pandas as pd
 import datetime as dt
-from datetime import date
 import streamlit as st
 from zoneinfo import ZoneInfo
 from google.oauth2.service_account import Credentials
@@ -10,8 +9,6 @@ from google.auth.transport.requests import Request
 
 waktuUpload = dt.datetime.now(ZoneInfo("Asia/Makassar")).strftime("%Y-%m-%d %H:%M:%S")
 PATH_LOG = "data/log upload.csv"
-
-SERVICE_ACCOUNT_FILE = "dashboard-magang-all-9de09e4a0ada.json"
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
