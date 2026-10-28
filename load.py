@@ -114,6 +114,8 @@ def save_data_to_google_sheet(data1, data2, data3, sheet1, sheet2, sheet3) :
         st.cache_data.clear()
         return True
     except Exception as e :
+        st.error(e)
+
         body = {
                 'values': [[waktuUpload, "Sheet Oil Gas", "Sheet WIP", "Sheet Well", "⚠️ Gagal"]]
             }
