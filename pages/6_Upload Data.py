@@ -50,10 +50,8 @@ if file is not None :
 
     try :
         save_data_to_google_sheet(OilGasData, wellData, wipData, "tabelOilGas", "tabelWell", "tabelWip")
-        text_progress.text("Data berhasil diupload ke Google Sheet... ")
+        text_progress.text("Data telah selesai diupload ke Google Sheet... ")
         bar_progress.progress(100)
-        st.success("✅ Data berhasil diupload ke Google Sheet.")
-
     except Exception as e :
         st.error("⚠️ Data gagal diupload ke Google Sheet.")
 
